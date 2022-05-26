@@ -1,72 +1,99 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>Number Guessing Game</title>
 
 	<style>
-		html {
-	font-family: 'Times New Roman', Times, serif;
-    font-size: 30px;
-	}
-	
 		body {
-	width: 50%;
-	max-width: 800px;
-	min-width: 480px;
-	margin: 0 auto;
-	}
-    .parent
-    {
-        text-align: center;
-        background-color: gray;
-        height: 700px;
-        color: rgb(71, 217, 55);
-        padding: 20px;
-    }
+			width: 100%;
+			margin: 0 auto;
+		}
+
+		.head {
+			background: -webkit-linear-gradient(rgb(4, 244, 24), rgb(14, 231, 231));
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+
+		.parent {
+			font-family: 'Times New Roman', Times, serif;
+			font-size: 30px;
+			text-align: center;
+			background-image: url('bg.jpg');
+			height: 700px;
+			padding: 20px;
+		}
+
+		.guessSubmit {
+			width: 170px;
+			height: 35px;
+			font-size: 20px;
+			padding: 2px;
+			border-radius: 10px;
+			background: rgb(238, 174, 202);
+			background: radial-gradient(circle, rgb(254, 64, 47), rgb(218, 177, 250) 100%);
+			cursor: pointer;
+			border: 2px solid gold;
+		}
+		.guessField
+		{
+			width: 170px;
+			height: 35px;
+			font-size: 20px;
+			padding: 2px;
+			border-radius: 15px;
+			border: none;
+			background: rgb(238, 174, 202);
+			background: radial-gradient(circle, rgb(47, 247, 254), rgb(218, 177, 250) 100%);
+		}
+		.txt
+		{
+			background: -webkit-linear-gradient(rgb(4, 35, 175),rgba(245, 7, 7, 0.986));
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
 	</style>
 </head>
 
 <body>
-    <div class="parent">
-<h1>Guess The Number</h1>
+	<div class="parent">
+		<h1 class="head">Guess The Number</h1>
 
-<p>We have a already selected number between 1 - 10.
-See if you can guess it.</p>
+		<p class="txt">We have a already selected number between 1 - 10.
+			See if you can guess it.</p>
 
-<div class="form">
-	<label for="guessField">Enter a guess: </label>
-	<input type = "text" id = "guessField" class = "guessField">
-	<input type = "submit" value = "Submit guess"
-		class = "guessSubmit" onclick="guessfun()">
-		<h4 id="output"></h4>
-</div>
-</div>
+		<div class="form">
+			<label for="guessField" class="txt">Enter a guess: </label>
+			<input type="text" id="guessField" class="guessField"><br><br>
+			<input type="submit" value="Submit guess" class="guessSubmit" onclick="guessfun()">
+			<h4 id="output"></h4>
+		</div>
+	</div>
 
-<script>
+	<script>
 
-	var y = 7;
-	var guess = 1;
-	
-	function guessfun(){
-		
-var x = document.getElementById("guessField").value;
+		var y = 7;
+		var guess = 1;
 
-if(x == y)
-{	
-	document.getElementById('output').innerHTML=("CONGRATULATIONS!!! YOU GUESSED IT RIGHT IN "
-			+ guess + " GUESS ");
-}
-else if(x > y) 
-{	
-	guess++;
-	alert("OOPS SORRY!! TRY A SMALLER NUMBER");
-}
-else
-{
-	guess++;
-	alert("OOPS SORRY!! TRY A GREATER NUMBER")
-}
-}
-</script>
+		function guessfun() {
+
+			var x = document.getElementById("guessField").value;
+
+			if (x == y) {
+				document.getElementById('output').innerHTML = ("CONGRATULATIONS!!! YOU GUESSED IT RIGHT IN "
+					+ guess + " GUESS ");
+			}
+			else if (x > y) {
+				guess++;
+				alert("OOPS SORRY!! TRY A SMALLER NUMBER");
+			}
+			else {
+				guess++;
+				alert("OOPS SORRY!! TRY A GREATER NUMBER")
+			}
+		}
+	</script>
 </body>
-</html>					
+
+</html>

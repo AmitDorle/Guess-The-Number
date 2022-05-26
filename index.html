@@ -8,8 +8,10 @@
 		body {
     width: 100%;
     margin: 0 auto;
-    background-color: rgb(246, 202, 202);
+   
 	background-image: url('bg.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 	</style>
 </head>
@@ -25,6 +27,7 @@
 			<label for="guessField" class="txt">Enter a guess: </label>
 			<input type="text" id="guessField" class="guessField"><br><br>
 			<input type="submit" value="Submit guess" class="guessSubmit" onclick="guessfun()">
+			<a href="index.html"><input type="reset"  value="Reset" class="guessSubmit"/></a>
 			<h4 id="output"></h4>
 		</div>
 	</div>

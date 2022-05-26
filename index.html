@@ -37,9 +37,36 @@ See if you can guess it.</p>
 	<label for="guessField">Enter a guess: </label>
 	<input type = "text" id = "guessField" class = "guessField">
 	<input type = "submit" value = "Submit guess"
-		class = "guessSubmit" id = "submitguess">
+		class = "guessSubmit" onclick="guessfun()">
+		<h4 id="output"></h4>
 </div>
 </div>
 
+<script>
+
+	var y = 7;
+	var guess = 1;
+	
+	function guessfun(){
+		
+var x = document.getElementById("guessField").value;
+
+if(x == y)
+{	
+	document.getElementById('output').innerHTML=("CONGRATULATIONS!!! YOU GUESSED IT RIGHT IN "
+			+ guess + " GUESS ");
+}
+else if(x > y) 
+{	
+	guess++;
+	alert("OOPS SORRY!! TRY A SMALLER NUMBER");
+}
+else
+{
+	guess++;
+	alert("OOPS SORRY!! TRY A GREATER NUMBER")
+}
+}
+</script>
 </body>
 </html>					

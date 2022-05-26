@@ -4,14 +4,22 @@
 <head>
 	<title>Number Guessing Game</title>
 	<link rel="stylesheet" href="./css/style.css" />
+	<style>
+		body {
+    width: 100%;
+    margin: 0 auto;
+    background-color: rgb(246, 202, 202);
+	background-image: url('bg.jpg');
+}
+	</style>
 </head>
 
 <body>
 	<div class="parent">
 		<h1 class="head">Guess The Number</h1>
 
-		<p class="txt">We have a already selected number between 1 - 10.
-			See if you can guess it.</p>
+		<p class="txt">We have selected a random number between 1 - 10.
+			 guess it.</p>
 
 		<div class="form">
 			<label for="guessField" class="txt">Enter a guess: </label>
@@ -23,7 +31,7 @@
 
 	<script>
 
-		var y = 7;
+		var y = Math.floor(Math.random() * 10 + 1);
 		var guess = 1;
 
 		function guessfun() {

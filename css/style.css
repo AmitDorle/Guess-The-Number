@@ -1,10 +1,6 @@
-body {
-    width: 100%;
-    margin: 0 auto;
-    background-color: rgb(246, 202, 202);
-}
+
 .head {
-    background: -webkit-linear-gradient(rgb(4, 244, 24), rgb(14, 231, 231));
+    background: -webkit-linear-gradient(rgb(14, 153, 132),rgb(134, 72, 145));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }

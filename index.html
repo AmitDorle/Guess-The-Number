@@ -3,6 +3,13 @@
 
 <head>
 	<title>Number Guessing Game</title>
+	<style>
+		body {
+			width: 100%;
+			margin: 0 auto;
+			background-image: url('bg.jpg');
+		}
+	</style>
 	<link rel="stylesheet" href="./css/style.css" />
 
 </head>
@@ -12,13 +19,13 @@
 		<h1 class="head">Guess The Number</h1>
 
 		<p class="txt">We have selected a random number between 1 - 10.
-			 guess it.</p>
+			guess it.</p>
 
 		<div class="form">
 			<label for="guessField" class="txt">Enter a guess: </label>
 			<input type="text" id="guessField" class="guessField"><br><br>
 			<input type="submit" value="Submit guess" class="guessSubmit" onclick="guessfun()">
-			<a href="index.html"><input type="reset"  value="Reset" class="guessSubmit"/></a>
+			<a href="index.html"><input type="reset" value="Reset" class="guessSubmit" /></a>
 			<h4 id="output"></h4>
 		</div>
 	</div>
